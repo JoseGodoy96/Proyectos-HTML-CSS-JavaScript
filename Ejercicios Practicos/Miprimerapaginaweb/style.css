@@ -1,33 +1,44 @@
+/*--- Global Settings ---*/
 * {
     box-sizing: border-box;
+    ---blanco:#e2eaff;
+    ---oscuro:#101632dd;
+    ---azul: #48e;
+    ---azulSencundario:#26a;
+    ---blancoSecundario:#fff;
+    ---azuloscuro:#18233f;
 }
 
 body {
-    font-size: 'Montserrat';
-    background-color: #e2eaff;
-    color: #101632dd;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(---blanco);
+    color: var(---oscuro);
 }
 
-body, div, ul, nav, header, footer, a, li, label {
+body, header, nav, div, footer, ul, li, a, label {
     margin: 0;
     padding: 0;
 }
 
-/* ------- HEADER SECTION ------- */
+/*--- Header Section ---*/
 
 .header {
-    background-color: #fff;
+    background-color: var(---blancoSecundario);
     display: flex;
     justify-content: space-between;
     align-items: center;
     container-type: inline-size;
     container-name: header;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-size: 20px;
 }
 
 .header__open-nav-button {
-    color: #48e;
+    color: var(---azul);
     font-size: 3rem;
-    font-weight: 600px;
+    font-weight: 600;
     position: absolute;
     right: 10px;
 }
@@ -36,9 +47,19 @@ body, div, ul, nav, header, footer, a, li, label {
     display: none;
 }
 
+.header__checkbox:checked ~ .header__nav {
+    display: flex;
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 100px;
+    margin: 10px 20px;
+}
+
 .header__nav {
     display: none;
-    background-color: #fff;
+    background-color: var(---blancoSecundario);
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -54,32 +75,20 @@ body, div, ul, nav, header, footer, a, li, label {
     justify-content: space-evenly;
 }
 
-.header__checkbox:checked ~ .header__nav {
-    display: flex;
-}
-
-.header__logo {
-    width: 64px;
-    margin: 10px 20px;
-}
-
 .header__nav-item {
     list-style: none;
 }
 
-.header__nav-item a {
-    color: #48e;
-}
-
-.header__nav-item a:not(:is(:hover,:active)) {
+.header__nav-link {
+    color: var(---azul);
     text-decoration: none;
 }
 
+.header__nav-link:is(:hover,:active) {
+    text-decoration: underline;
+}
 
-
-
-/* -------- HEADER QUERIES ------- */
-
+/*--- Header Queries ---*/
 
 @container header (min-width: 600px) {
     .header__nav {
@@ -88,6 +97,7 @@ body, div, ul, nav, header, footer, a, li, label {
         height: auto;
         width: auto;
         justify-content: space-between;
+        z-index: 0;
     }
 
     .header__nav-list {
@@ -101,10 +111,310 @@ body, div, ul, nav, header, footer, a, li, label {
     .header__open-nav-button {
         display: none;
     }
+    
 }
 
+/*--- Header Ends ---*/
 
-/* -------- HEADER ENDS ------- */
+/*--- Profile Section ---*/
 
+.profile {
+    container-name: profile;
+    container-type: inline-size;
+}
 
-/* ------- PROFILE SECTION ------- */ 
+.profile__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(---blancoSecundario);
+    max-width: 1400px;
+}
+
+.profile__data-container {
+    max-width: 600px;
+    padding: 12px;
+}
+
+.profile__img-container {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.profile__img {
+    max-width: 100%;
+    width: 720px;
+}
+
+h1 {
+    color: var(--azulSencundario);
+}
+
+.profile__skills-container h2 {
+    color: var(--azulSencundario);
+}
+
+.profile__skill {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    max-width: 600px;
+    margin-left: 0;
+    align-items: center;
+}
+
+.load-bar {
+    border: 2px solid var(---azul);
+    border-radius: 8px;
+    color: var(---blancoSecundario);
+    padding: 2px;
+    font-size: 12px;
+    width: 80%;
+    margin: 4px;
+    margin-left: 0;
+}
+
+.profile__skill-name {
+    color: var(---azul);
+}
+
+.load-bar__bar {
+    background-color: var(---azul);
+    border-radius: 4px;
+    padding: 4px 6px;
+}
+
+.bar--80 {
+    width: 80%;
+}
+
+.bar--70 {
+    width: 70%;
+}
+
+.bar--90 {
+    width: 90%;
+}
+
+.bar--60 {
+    width: 60%;
+}
+
+/*--- Profile Queries ---*/
+
+@container profile (min-width: 600px) {
+    .profile__wrapper {
+        flex-direction: row;
+        padding: 20px;
+        background-color: transparent;
+        height: 90vh;
+        margin: auto;
+    }
+
+    .profile__data-container {
+        background-color: var(---blancoSecundario);
+        display: flex;
+        align-items: center;
+        border-radius: 0 25px 25px 0 ;
+        box-shadow: 0 0 9px #0002;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 4rem;
+        text-wrap: balance;
+    }
+
+    .profile__data {
+        max-width: 620px;
+    }
+
+    .profile__img-container {
+        max-height: initial;
+    }
+
+    .profile__img {
+        height: 100%;
+        object-fit: cover;
+        width: 620px;
+    }
+} 
+
+/*--- Profile Ends ---*/
+
+/*--- Portfolio Section ---*/
+
+.portfolio {
+    background-color: var(---azuloscuro);
+    color: var(---blancoSecundario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+    justify-content: space-evenly;
+}
+
+.portfolio__title {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.portfolio__project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    min-height: 80vh;
+}
+
+.portfolio__project {
+    background-image: linear-gradient(#0006,#0006), url(newprojectoweb.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    border-radius: 8px;
+}
+
+.portfolio__project:hover {
+    opacity: 0.74;
+    outline: 2px solid #fff6;
+}
+
+/*---  Portfolio Queries ---*/
+
+@container portfolio (min-width: 900px) {
+    .portfolio__project-container {
+        grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+    }
+
+    .portfolio__project:first-child {
+        grid-column: span 2;
+    }
+
+    .portfolio__project:last-child {
+        grid-column: span 2;
+    }
+}
+
+@container portfolio (min-width: 1300px) {
+    .portfolio__project-container {
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+
+    .portfolio__project:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .portfolio__project:last-child {
+        grid-column: span 4;
+
+    }
+}
+
+/*--- Portfolio ends ---*/
+
+/*--- Contact Section ---*/
+
+.form {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.form__form {
+    padding: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 9px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #0003;
+    background-color: var(---blancoSecundario);
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"] {
+    padding: 12px;
+    background-color: var(---azul);
+    color: var(---blancoSecundario);
+}
+
+.form__title {
+    font-size: 2.4rem;
+}
+
+/*--- Contact Queries ---*/
+
+@container form (min-width: 600px) {
+    .form__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name lastname" 
+        "email email" 
+        "message message"
+        "button button";
+        gap: 12px;
+        background-image: radial-gradient(#18233f11, #18233f33);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 40px #0006;
+    }
+
+    .form__input-container:first-child {
+        grid-area: name;
+    }
+
+    .form__input-container:nth-child(2) {
+        grid-area: lastname;
+    }
+
+    .form__input-container:nth-child(3) {
+        grid-area: email;
+    }
+
+    .form__input-container:nth-child(4) {
+        grid-area: message;
+    }
+
+    .form__input-container:nth-child(5) {
+        grid-area: button;
+    }
+
+    .form__input-container :is(input,textarea) {
+        box-shadow: none;
+        border-radius: 4px;
+    }
+}
+
+/*--- Contact Ends ---*/
+
+footer {
+    padding: 60px;
+    text-align: center;
+    background-color: var(---azuloscuro);
+    color: var(---blancoSecundario);
+    font-size: 22px;
+}

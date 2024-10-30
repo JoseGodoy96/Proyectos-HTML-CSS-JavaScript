@@ -1,0 +1,1 @@
+const words = ['Aurora', 'Trebol', 'Susurro', 'Albahaca', 'Horizonte', 'Murmullo', 'Destello', 'Relampago', 'Refugio', 'Marfil', 'Caravana', 'Bruma', 'Azabache', 'Eclipse', 'Luciernaga', 'Tempestad', 'Nomada', 'Efimero', 'Arcano', 'Espejismo'];

@@ -133,7 +133,6 @@ body {
         background-color: #000;
         display: grid;
         grid-auto-rows: max-content;
-        transform: translateX(100%);
     }
 
     .menu__links--show {

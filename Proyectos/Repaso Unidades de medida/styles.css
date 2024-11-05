@@ -1,0 +1,56 @@
+/* EM
+.padre {
+    font-size: 10px;
+}
+
+.padre h1 {
+    font-size: 5em;
+}
+
+.padre2 {
+    font-size: 50px;
+}
+
+.caja {
+    width: 13em;
+    height: 13em;
+    text-align: center;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.caja h3 {
+    font-size: 5em;
+}
+*/
+
+html {
+    font-size: 10px;
+}
+
+.caja {
+    font-size: 2rem;
+    width: 25rem;
+    height: 25rem;
+    text-align: center;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+@media (max-width: 750px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 528px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 368px) {
+    :root {
+        font-size: 15px;
+    }
+}

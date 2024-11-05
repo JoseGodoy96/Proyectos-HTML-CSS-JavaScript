@@ -1,0 +1,10 @@
+:root{
+    --mi-variable: #fff;
+    --border-box: 5px;
+    --fuente: sans serif;
+}
+
+
+body {
+    background-color: var(--mi-variable);
+}

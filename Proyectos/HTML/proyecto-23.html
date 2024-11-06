@@ -1,0 +1,58 @@
+<!-- 
+Enunciado:
+CREA UN FORMULARIO CON UN CAMPO DE TIPO BUSQUEDA, TELEFONO, HORA, URL, BARRA PROGRESO, LISTA DE DATOS, SUBMIT, RESET
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="">BUSQUEDA</label>
+            <input type="search"></input>
+        </div>
+
+        <div>
+            <label for="telefono">BUSQUEDA</label>
+            <input type="tel"></input>
+        </div>
+
+        <div>
+            <label for="HORA">HORA</label>
+            <input type="time"></input>
+        </div>
+
+        <div>
+            <label for="URL">SITIO WEB</label>
+            <input type="url"></input>
+        </div>
+
+        <div>
+            <label for="BARRA">BARRA DE PROGRESO</label>
+            <progress max="100" value="50">50%</progress>
+        </div>
+
+        <div>
+            <label for="coches">lista de coches</label>
+            <input list="coches" name="coches"></input>
+
+            <datalist id="coches">
+                <option value="audi">audi</option>
+                <option value="ferrari">ferrari</option>
+                <option value="renault">renault</option>
+            </datalist>
+        </div>
+
+        <input type="submit" value="enviar"></input>
+        <input type="reset">
+
+
+
+    </form>
+</body>
+</html>

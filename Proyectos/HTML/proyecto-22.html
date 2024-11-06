@@ -1,0 +1,99 @@
+<!-- 
+Enunciado:
+CREA UN FORMULARIO CON UN CAMPO DE TIPO TEXTAREAA, EMAIL, CONTRASEÑA, RADIO, SELECT, FICHERO, FECHA, NUMERO, COLOR Y SUBMIT
+TODOS LOS CAMPOS DEBERAN ESTAR DENTRO DE UN FIELDSET Y USAR EL CAMPO LEGEND.
+TODOS LOS CAMPOS DEBERAN TENER UN LABEL.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Descripcion</legend>
+            <label for="Descripcion">Introduce una Descripcion</label>
+            <textarea name="descripcion" id="descripcion"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Descripcion</legend>
+            <label for="Descripcion">Introduce una Descripcion</label>
+            <input type="email">
+        </fieldset>
+
+        <fieldset>
+            <legend>Descripcion</legend>
+            <label for="Descripcion">Introduce una Descripcion</label>
+            <input type="password">
+        </fieldset>
+
+        <fieldset>
+            <legend>Descripcion</legend>
+            <label for="Descripcion">Introduce una Descripcion</label>
+
+            <input type="radio" name="edad" id="mayor">
+            <label for="mayor">Mayor de edad</label>
+
+            <input type="radio" name="edad" id="menor">
+            <label for="menor">menor de edad</label>
+
+            <input type="radio" name="edad" id="anciano">
+            <label for="anciano">anciano de edad</label>
+
+            <input type="radio" name="edad" id="niño">
+            <label for="niño">niño de edad</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Descripcion</legend>
+
+            <label for="comidas">Hostalizas</label>
+            <select>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Checkbox</legend>
+
+            <label for="Descripcion">Introduce una Descripcion</label>
+            <input type="checkbox" name="vegano" id="vegano">
+        </fieldset>
+
+        <fieldset>
+            <legend>Archivo</legend>
+
+            <label for="Archivo">Introduce una Descripcion</label>
+            <input type="file">
+        </fieldset>
+
+        <fieldset>
+            <legend>FECHA</legend>
+            <label for="FECHA">Introduce una Descripcion</label>
+            <input type="date">
+        </fieldset>
+
+        <fieldset>
+            <legend>NUMERO</legend>
+            <label for="NUMERO">Introduce una Descripcion</label>
+            <input type="number" name="number" id="number">
+        </fieldset>
+
+        <fieldset>
+            <legend>COLOR</legend>
+            <label for="COLOR">Introduce una Descripcion</label>
+            <input type="color" name="color" id="color">
+        </fieldset>
+
+        <input type="submit" value="Enviar informacion">
+    </form>
+</body>
+</html>

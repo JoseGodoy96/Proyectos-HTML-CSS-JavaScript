@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+article h2 {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+article a {
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+article p {
+    font-size: 14px;
+    color: black;
+    border: 1px solid grey;
+}

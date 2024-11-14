@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Opensans;
+    src: url(../opensans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+
+body {
+    background-color: aliceblue;
+} 
+
+h1 {
+    font-size: 50px;
+    font-family: "Roboto";
+}
+
+h3 {
+    font-size: 30px;
+    font-family: Opensans;
+}
+
+h4 {
+    font-family: sans-serif;
+}

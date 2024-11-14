@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 10</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="..//fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Krub:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout">
+        <h1 class="layout__title">Busca tu hotel</h1>
+
+        <form class="layout__search" action="">
+            <input class="search__input" type="search" placeholder="Busca tu hotel y lo encontraras">
+            <button class="search__btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <main class="layout__results">
+            <article class="results__result">
+                <p class="result__subtitle">Nombre:</p>
+                <h3 class="result__title">Hotel Jose</h3>
+            </article>
+
+            <article class="results__result">
+                <p class="result__subtitle">Ubicacion:</p>
+                <h3 class="result__title">Camino de Ronda</h3>
+            </article>
+
+            <article class="results__result">
+                <p class="result__subtitle">Fecha:</p>
+                <h3 class="result__title">01/07/2023</h3>
+            </article>
+        </main>
+
+        <section class="layout__map">
+            <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.0715113195333!2d-3.6132713112806054!3d37.17477147467919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fc93baf2bfc5%3A0xd6a73d602daca4f3!2sCam.%20de%20Rda.%2C%20118%2C%20Ronda%2C%2018003%20Granada!5e0!3m2!1ses!2ses!4v1731600246170!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+</body>
+</html>

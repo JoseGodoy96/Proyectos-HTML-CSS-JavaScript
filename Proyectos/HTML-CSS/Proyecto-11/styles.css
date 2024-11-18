@@ -1,0 +1,23 @@
+.cabecera {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: blue;
+}
+
+.cuerpo {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../coche.jpg);
+    background-repeat: repeat;
+}
+
+h1 {
+    color: white;
+}
+
+h3 {
+    border: 3px solid green;
+    background-color: red;
+    margin: 10px;
+    color: white;
+}

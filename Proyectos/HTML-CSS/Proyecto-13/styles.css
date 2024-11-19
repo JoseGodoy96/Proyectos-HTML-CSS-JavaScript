@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    letter-spacing: 40px;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+
+h3 {
+    text-align: center;
+    word-spacing: 20px;
+    text-transform: capitalize;
+}
+
+p {
+    text-align: justify;
+    text-indent: 10px;
+    text-transform: capitalize;
+}

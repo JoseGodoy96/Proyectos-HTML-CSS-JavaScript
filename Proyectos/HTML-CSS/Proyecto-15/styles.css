@@ -1,0 +1,23 @@
+#Caja1,
+#Caja2 {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 400px;
+}
+
+h1,h2,h3 {
+    font-size: 20px;
+}
+
+#caja1 {
+    background-color: aqua;
+}
+
+#caja2 {
+    background-color: aquamarine;
+}

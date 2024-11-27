@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 24</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="..//fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Krub:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout">
+        <main class="layout__main">
+            <section class="main__left">
+                <ol class="main__steps">
+                    <li class="steps__item">
+                        <div class="steps__container-number">
+                            <span class="steps__number">1</span>
+                        </div>
+
+                        <div class="steps__content">
+                            <span class="steps__title">Paso 1</span>
+                            <span class="steps__description"> Crea tu cuenta</span>
+                        </div>
+                    </li>
+                    <li class="steps__item">
+                        <div class="steps__container-number">
+                            <span class="steps__number">2</span>
+                        </div>
+
+                        <div class="steps__content">
+                            <span class="steps__title">Paso 2</span>
+                            <span class="steps__description">Direccion</span>
+                        </div>
+                    </li>
+
+                    <li class="steps__item">
+                        <div class="steps__container-number">
+                            <span class="steps__number">3</span>
+                        </div>
+
+                        <div class="steps__content">
+                            <span class="steps__title">Paso 3</span>
+                            <span class="steps__description">Forma de pago</span>
+                        </div>
+                    </li>
+
+                    <li class="steps__item">
+                        <div class="steps__container-number">
+                            <span class="steps__number">4</span>
+                        </div>
+
+                        <div class="steps__content">
+                            <span class="steps__title">Paso 4</span>
+                            <span class="steps__description">Confirmación</span>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+ 
+            <section class="main__right">
+                <header class="main__header">
+                    <h1 class="header__title">Registro</h1>
+                    <p class="header__subtitle">Crea tu cuenta para poder seguir con la compra</p>
+                </header>
+
+                <form class="main__form" action="">
+                    <div class="form__control">
+                        <label class="form__label" for="name">Nombre</label>
+                        <input class="form__input" type="text" form="name" id="name" placeholder="Introduce tu nombre">
+                    </div>
+
+                    <div class="form__control">
+                        <label class="form__label" for="surname">Apellidos</label>
+                        <input class="form__input" type="text" form="surname" id="surname" placeholder="Introduce tus apellidos">
+                    </div>
+
+                    <div class="form__control">
+                        <label class="form__label" for="Email">Email</label>
+                        <input class="form__input" type="email" form="Email" id="Email" placeholder="Introduce tu Email">
+                    </div>
+
+                    <div class="form__control">
+                        <label class="form__label" for="date">Fecha de nacimiento</label>
+                        <input class="form__input" type="date" form="date" id="date" placeholder="Introduce tu fecha de nacimiento">
+                    </div>
+
+                    <div class="form__control">
+                        <label class="form__label" for="pass">Contraseña</label>
+                        <input class="form__input" type="password" form="pass" id="pass" placeholder="Introduce tu contraseña">
+                    </div>
+
+                    <input class="form__btn" type="submit" value="Siguiente">
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

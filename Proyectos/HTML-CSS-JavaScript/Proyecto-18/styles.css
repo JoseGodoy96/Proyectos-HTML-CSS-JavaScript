@@ -1,0 +1,67 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #e8effa;
+}
+
+.layout {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout__main {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layout__container-crono {
+    margin-bottom: 1rem;
+}
+
+.layout__crono {
+    font-size: 7rem;
+    font-weight: bold;
+    width: 25rem;
+}
+
+.layout__btns {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;  
+}
+
+.layout__btn-start,
+.layout__btn-stop {
+    width: 100%;
+    border: none;
+    background-color: #ec3d3d;
+    color: white;
+    font-weight: 600;
+    padding: 0.7rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.layout__btn-stop {
+    background-color: #cccccc;
+    color: white;
+}
+
+.layout__btn-start:hover {
+    background-color: rgb(22, 140, 22);
+}
+
+.layout__btn-stop:hover {
+    background-color: rgb(17, 14, 14);
+}

@@ -1,0 +1,51 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat' Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.layout {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout__form {
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.form__input {
+    width: 26rem;
+    height: 5rem;
+    font-weight: 600;
+    display: block;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.form__eye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #444;
+}
+
+.form__eye > .fa-solid {
+    cursor: pointer;
+}
+
+.form__eye > .fa-solid:active {
+    color: red;
+}

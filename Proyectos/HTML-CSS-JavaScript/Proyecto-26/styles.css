@@ -1,0 +1,56 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat' Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.layout {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.layout__main {
+    width: 25rem;
+    height: 25rem;
+}
+
+.main__star {
+    color: yellow;
+    font-size: 25rem;
+    cursor: pointer;
+    position: absolute;
+}
+
+.main__star--gray {
+    color: #ccc;
+    z-index: 1;
+}
+
+.main__star--yellow {
+    color: #fbe323;
+    z-index: 1;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes scale-animation {
+    100% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+.visible {
+    animation: scale-animation 1s linear;
+    opacity: 1;
+    visibility: visible;
+}

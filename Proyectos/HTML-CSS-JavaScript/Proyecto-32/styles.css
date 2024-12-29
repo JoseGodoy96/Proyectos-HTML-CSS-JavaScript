@@ -1,0 +1,68 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #F7F8FD;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout__main {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main__slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides__item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F8FD;
+    transition: all 500ms linear;
+}
+
+.slides__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.main__next,
+.main__prev {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.main__next .fa-solid,
+.main__prev .fa-solid {
+    font-size: 13rem;
+    color: #317cd8;
+}
+

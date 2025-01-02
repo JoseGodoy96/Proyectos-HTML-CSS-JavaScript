@@ -8,7 +8,7 @@ window.addEventListener("load", (event) => {
     });
 
 
-    let createNote = (body = "", title = "") => {
+    let createNote = (body = "", title = "", transition = "true") => {
         let note = document.createElement('article');
         note.classList.add("notes__note");
 
@@ -39,6 +39,14 @@ window.addEventListener("load", (event) => {
         });
 
         notes.appendChild(note);
+
+        if(transition){
+            setTimeout(() => {
+                note.classList.add(".note__visible");
+            }, 10);
+        } else {
+            note.classList.add(".note__visible_no_transition");
+        }
     }
 
     let update = () => {
@@ -69,7 +77,7 @@ window.addEventListener("load", (event) => {
 
         if(notesStorage){
             notesStorage.forEach((note) => {
-                createNote(note.body, note.title);
+                createNote(note.body, note.title, false);
             });
         }
     }
@@ -77,3 +85,4 @@ window.addEventListener("load", (event) => {
     getNotes();
 
 });
+

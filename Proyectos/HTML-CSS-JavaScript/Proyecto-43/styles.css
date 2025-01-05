@@ -1,0 +1,130 @@
+/* Layout Generaal */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #f7f8fd;
+    overflow: hidden;
+}
+
+.layout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.layout__main {
+    width: 120rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+/* Layout nav */
+
+.layout__nav {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: transparent;
+    clip-path: circle(100rem at calc(100% - 5%) 3.1rem);
+    transition: clip-path 500ms;
+}
+
+.layout__nav--show {
+    width: 100%;
+    height: 100%;
+    background-color: #7ab0f7;
+    clip-path: circle(100% at 50% 50%);
+}
+
+.nav__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #7ab0f7;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 30rem;
+    cursor: pointer;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav__list--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.list__item {
+    width: 20rem;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms linear;
+    list-style: none;
+}
+
+.list__item:hover {
+    transform: translateY(-10px);
+}
+
+.list__link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Layout Main */
+
+.main__article {
+    width: 25%;
+    background-color: #c5deff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.article__container-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.article__img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.article__title,
+.article__description {
+    text-align: center;
+    margin-top: 2rem;
+}
+

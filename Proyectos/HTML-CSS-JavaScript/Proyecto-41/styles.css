@@ -1,0 +1,93 @@
+/* Layout Generaal */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #f7f8fd;
+    overflow-x: hidden;
+}
+
+.layout {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.layout__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__articles {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+    height: 100%;
+    padding: 3rem 4rem;
+}
+
+.articles__article {
+    padding: 2rem;
+    border: 2px solid #356876;
+    border-radius: 5px;
+    transform: translate(400%);
+    transition: all 400ms linear;
+}
+
+.articles__article--show {
+    transform: translate(0%);
+}
+
+.article__title {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: #356876;
+    margin-bottom: 1.5rem;
+}
+
+.article__description {
+    font-size: 1.4rem;
+    color: #adaebf;
+    margin-bottom: 2rem;
+}
+
+.article__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info__container-img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.info__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.info__container-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__name {
+    font-size: 1.4rem;
+    color: #453b48;
+    font-weight: 600;
+}
+
+.info__date {
+    font-size: 1.4rem;
+    color: #bbb;
+    font-weight: 400;
+}

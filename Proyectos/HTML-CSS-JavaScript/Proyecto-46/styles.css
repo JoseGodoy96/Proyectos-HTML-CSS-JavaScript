@@ -1,0 +1,185 @@
+/* Layout Generaal */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    height: 100vh;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f8fd;
+}
+
+.layout__main {
+    position: relative;
+    width: 40rem;
+    height: 60rem;
+    padding: 2rem 3rem;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #ececec;
+}
+
+/* Layout nav */
+
+.main__nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #3e3e3e;
+    color: white;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 1rem;
+    padding-inline-start: 0;
+    padding: 1rem 1rem;
+}
+
+.nav__item {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 300ms linear;
+}
+
+.nav__item:hover,
+.nav__item--active {
+    background-color: #494949;
+}
+
+.nav__icon {
+    font-size: 2rem;
+}
+
+.nav__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 0.5rem;
+}
+
+/* Layout articles */
+
+.main__page {
+    width: 74%;
+    height: 74%;
+    position: absolute;
+    padding: 2rem 3rem;
+    transition: all 200ms linear;
+    transform: scale(0);
+}
+
+.main__page--active {
+    transform: scale(1);
+}
+
+/* Layout Inicio */
+
+.page__title {
+    font-size: 3rem;
+}
+
+.page__content {
+    margin-top: 2rem;
+    background-color: #adc2ff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.content__btn {
+    background-color: #84a0f1;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2e2d2d;
+}
+
+/* layout Redes */
+
+.page__content--social {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.content__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #bbb;
+    color: black;
+    text-decoration: none;
+}
+
+.content__social:hover {
+    color: #3b69f0;
+}
+
+/* layout Cursos */
+
+.page-courses {
+    background-color: #B1DFF0;
+}
+
+.content__title-courses {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #7897AD;
+}
+
+.content__btn-courses {
+    background-color: #84D6F4;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #7897AD;
+}
+
+/* layout web y contacto*/
+
+.page__web {
+    width: 100%;
+    height: 85%;
+}

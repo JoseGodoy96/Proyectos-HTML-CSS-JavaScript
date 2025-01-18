@@ -3,46 +3,80 @@ window.addEventListener("load", () => {
     let input = document.querySelector(".form__input"); 
     let form = document.querySelector(".main__form");
     let list = document.querySelector(".form__list");
-    let allTask = document.querySelectorAll(".list__task");
+
+    let loadList = () => {
+
+        let tasks = JSON.parse(localStorage.getItem("tasks"));
+
+        if (tasks) {
+            tasks.forEach(task => {
+                add(task.text, task.completed);
+            });
+        }
+    }
 
     let saveAndUpdate = () => {
+
+        let allTask = document.querySelectorAll(".list__task");
         let newTasks = [];
 
         allTask.forEach(item => {
-            let task = item.querySelector(".task__text");
-            let check = item.querySelector(".task__check");
 
-            let taskObj = {
+            let task = item.querySelector(".task__text");
+            let check = item.querySelector(".task__check"); 
+
+            let taskObj = [
+            {
                 text: task.innerText,
                 completed: check.checked
-            };
+            }
+            ];
 
-
-
-            newTasks.push(taskObj)
+            newTasks.push(taskObj);      
         });
 
-        localStorage.setItem("tasks", JSON.stringify(newTasks));
+        localStorage.setItem("task", JSON.stringify(newTasks));
     };
 
-    let add = (task) => {
-        console.log(task)
+    let deleteTask = (task) => {
+        task.remove();
+    };
 
-        if(task.trim() != "") {
+    let add = (task, completed = false) => {
+        console.log(task);
 
-            list.innerHTML +=`
-            <li class="list__item">
+        if (task.trim() != "") {
+            let item = document.createElement("li");
+            item.classList.add("list__item");
+
+            item.innerHTML += `
                 <div class="list__task">
-                    <input class="task__check" type="checkbox"
+                    <input class="task__check" type="checkbox" ${completed ? "checked" : ""}>
                     <p class="task__test">${task}</p>
-                </div
+                </div>
                 <i class="fa-solid fa-trash list__delete"></i>
-            </li>
             `;
+
+            list.appendChild(item);
 
             saveAndUpdate();
 
             input.value = "";
+
+            let btnDelete = item.querySelector(".list__delete");
+
+            btnDelete.addEventListener("click", () => {
+                deleteTask(item);
+                saveAndUpdate();
+            });
+
+            let checkbox = item.querySelector(".task__check");
+
+            checkbox.addEventListener("change", () => {
+                item.classList.toggle("list__item--completed");
+                saveAndUpdate();
+                console.log(checkbox.checked)
+            });
         };
     };
 
@@ -52,5 +86,8 @@ window.addEventListener("load", () => {
         let task = input.value;
 
         add(task);
+
     });
+
+    loadList();
 });

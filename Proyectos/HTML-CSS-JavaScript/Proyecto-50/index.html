@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto 49</title>
+    <title>Proyecto 50</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,24 +13,28 @@
 </head>
 <body>
     <div class="layout">
-        <main class="layout__main">
-            <h1 class="main__title">Las tareas de Jose Maria Godoy</h1>
-            <form class="main__form">
-                <input class="form__input" type="text" placeholder="Que tienes que hacer hoy?">
-
-                <ul class="form__list">
-                    <li class="list__item">
-                        <div class="list__task">
-                            <input class="task__check" type="checkbox">
-
-                            <p class="task__test">Tarea de prueba 1</p>
-                        </div>
-
-                        <i class="fa-solid fa-trash list__delete"></i>
-                    </li>
-                </ul>
-            </form>
+        <main class="layout__products">
+            <!-- Cargar Productos -->
         </main>
+
+        <aside class="layout__cart layout__cart--hide">
+            <header class="cart__header">
+                <h3 class="cart__title">Mi carrito</h3>
+
+                <i class="cart__ico fa-solid fa-brands fa-xmark"></i>
+            </header>
+
+            <section class="cart__products">
+                <!-- Cargar elementos del carrito -->
+            </section>
+
+            <div class="cart__total">
+                <span class="total__text">Total</span>
+                <span class="total__price">0€</span>
+            </div>
+
+            <button class="cart__btn">Comprar todo</button>
+        </aside>
     </div>
 </body>
 </html>

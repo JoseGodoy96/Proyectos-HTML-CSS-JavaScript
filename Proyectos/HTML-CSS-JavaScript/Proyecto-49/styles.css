@@ -106,3 +106,8 @@ body {
 .list__delete:hover {
     background-color: #444;
 }
+
+.list__item--completed .task__text{
+    color: #777;
+    text-decoration: line-through;
+}
